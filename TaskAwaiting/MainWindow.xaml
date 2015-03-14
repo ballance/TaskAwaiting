@@ -1,8 +1,14 @@
 ﻿<Window x:Class="TaskAwaiting.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Pub Sub - Simple Hello" Height="550" Width="725"
+        >
     <Grid>
-        
+        <Rectangle VerticalAlignment="Top" HorizontalAlignment="{Binding RectangleLocation}" Margin="30,10"  Fill="orange" Width="30" Height="30"></Rectangle>
+
+        <StackPanel Margin="30">
+            <Button Width="80" Background="Green" Foreground="White" FontFamily="segoe ui"  Content="Say Hi!" Command="{Binding MakeOutput}"></Button>
+            <TextBox Height="380" Margin="0,10" Name="OutputBox" VerticalScrollBarVisibility="Auto" Text="{Binding Output, Mode=TwoWay}"></TextBox>
+        </StackPanel>
     </Grid>
 </Window>
